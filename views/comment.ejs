@@ -1,0 +1,21 @@
+<br/>
+<% post.comments.forEach(function (comment, index) { %>
+<div style="padding-left:4em;">
+    <p><img src="<%= comment.head %>" class="l_head"/><a href="<%= comment.website %>"><%= comment.name %></a>
+        <% var time = new Date(comment.time) %>
+        <span class="info"> 回复于 <%= time.getFullYear() + "-" + (time.getMonth() + 1) + "-" + time.getDate() + " " + time.getHours() + ":" + (time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()) %></span>
+    </p>
+    <p><%- comment.content %></p>
+</div>
+<% }) %>
+
+<form method="post" action="/u/<%= post._id %>">
+    <% if (user) { %>
+    <p>欢迎您！<%= user.name %>，给我留言吧！</p>
+    <input type="hidden" name="name" value="<%= user.name %>"/>
+    <% } else { %>
+    <p>您还没有<a href="/login?redirect=/p/<%= post._id %>">登录</a>！<a target="_blank" href="/reg">注册</a>账号！</p>
+    <% } %>
+    <textarea name="content" rows="5" cols="80"></textarea><br/>
+    <input type="submit" value="留言"/>
+</form>

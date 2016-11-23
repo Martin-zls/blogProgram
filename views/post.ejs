@@ -1,0 +1,19 @@
+<%- include header %>
+<form method="post">
+    标题：<br/>
+    <input type="text" name="title"/><br/>
+    标签：<br/>
+    <input type="text" name="tags"/><br/>
+    正文：<br/>
+    <textarea name="post" rows="20" cols="100"></textarea><br/>
+    <input type="submit" value="发表"/>
+</form>
+<div>
+    <p><input type="file" id="file1" name="file" /></p>
+    <input id="picuploadbtn" type="button" value="上传" />
+    <p><img id="img1" alt="上传成功啦" src="" /></p>
+</div>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/ajaxfileupload.js"></script>
+<script src="/javascripts/picUpload.js"></script>
+<%- include footer %>

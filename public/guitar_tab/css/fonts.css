@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Bebas-Bold';
+    src: url('/fonts/Bebas-webfont.eot');
+    src: url('/fonts/Bebas-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Bebas-webfont.woff2') format('woff2'),
+         url('/fonts/Bebas-webfont.woff') format('woff'),
+         url('/fonts/Bebas-webfont.ttf') format('truetype'),
+         url('/fonts/Bebas-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
